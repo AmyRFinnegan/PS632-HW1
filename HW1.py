@@ -6,6 +6,10 @@ def shout(txt):
   new_txt = new_txt.replace("?", "!")
   return new_txt
   
+  # import HW1
+  # txt = "hello"
+  # HW1.shout(txt)
+  
 def reverse(txt):
   if isinstance(txt, str) == False:
     return ""
