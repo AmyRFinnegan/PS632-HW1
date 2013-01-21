@@ -50,7 +50,7 @@ def reversewords(txt):
       new_text += sentence
       new_text += "."
     
-  return new_text
+  return new_text.capitalize()
   
   # drops the last word if there is no punctuation
 def reversewordletters(txt):
