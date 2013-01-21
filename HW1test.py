@@ -38,7 +38,7 @@ class TestHW1Code(unittest.TestCase):
 	def test_reverse_2(self):
 		txt = HW1.reverse('spoons')
 		rtxt = 'spoons'
-		print "If I reverse %s, I get %s" % (rtxt, txt)
+		print "If I reverse %s, I get %s. :)" % (rtxt, txt)
 		tmp = 1
 		for i in range(len(txt)) :
 			self.assertEqual(txt[i], rtxt[-tmp])
@@ -48,11 +48,15 @@ class TestHW1Code(unittest.TestCase):
 		## reversewords test
 		
 	def test_reversewords(self):
-		self.assertEqual(HW1.reversewords('My dog tess.'), "Tess dog my.")
+		self.assertEqual(HW1.reversewords('Do it right this time.'), "Time this right it do.")
 	
+		## reversewordletters test
+		
+	def test_reversewordletters(self):
+		self.assertEqual(HW1.reversewordletters('Do it right this time?'), "oD ti thgir siht emit?")
 
 	
-	
+		## Pig Latin test
 
 		
 if __name__=='__main__':
