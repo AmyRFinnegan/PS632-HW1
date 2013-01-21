@@ -16,10 +16,14 @@ def reverse(txt):
       
   return txt[::-1]
   
+  		## problem is that it puts in a . and "" when it reverses it. Fixed.
+		## also, doesn't capitalize the first word like a sentence.
+		
+
 def reversewords(txt):
   if isinstance(txt, str) == False:
     return ""
-  
+  txt = txt.lower()
   new_text = ""
   reversed_sentences = []
     
@@ -44,10 +48,11 @@ def reversewords(txt):
   for sentence in reversed_sentences:
     if len(sentence) > 0:
       new_text += sentence
-      new_text += ". "
+      new_text += "."
     
   return new_text
   
+  # drops the last word if there is no punctuation
 def reversewordletters(txt):
   if isinstance(txt, str) == False:
     return ""
