@@ -81,10 +81,16 @@ def reversewordletters(txt):
 def piglatin(txt):
   if isinstance(txt, str) == False:
     return ""
+	
+  firstLetter = txt[0]
+  weirdos = 'q'
+  vowels = 'aeiou'
   
-  if txt == "test":
-    return "estte"
-  elif txt == "pig latin":
-    return "igpe atinle"
-    
-  raise NotImplementedError("Didn't quite finish this one....")
+  if firstLetter in vowels:
+    return txt + 'ay'
+  elif firstLetter not in vowels and firstLetter not in weirdos:
+	tmp = txt[0]
+	return txt[1:] + tmp + 'ay'
+  else: 
+	tmp2 = txt[:2]
+	return txt[2:] + tmp2 + 'ay'   
