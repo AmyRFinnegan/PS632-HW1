@@ -17,7 +17,7 @@ def reverse(txt):
   return txt[::-1]
   
   		## problem is that it puts in a . and "" when it reverses it. Fixed.
-		## also, doesn't capitalize the first word like a sentence.
+		## also, doesn't capitalize the first word like a sentence. Fixed.
 		
 
 def reversewords(txt):
@@ -52,7 +52,8 @@ def reversewords(txt):
     
   return new_text.capitalize()
   
-  # drops the last word if there is no punctuation
+  # Problem: drops the last word if there is no punctuation
+  
 def reversewordletters(txt):
   if isinstance(txt, str) == False:
     return ""
