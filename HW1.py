@@ -58,6 +58,7 @@ def reversewordletters(txt):
   if isinstance(txt, str) == False:
     return ""
   
+  txt = txt + "."
   tmp_text = ""
   
   back_pointer = 0
@@ -75,7 +76,7 @@ def reversewordletters(txt):
       
       back_pointer = i+1
       
-  return tmp_text
+  return tmp_text[:-1]
   
 def piglatin(txt):
   if isinstance(txt, str) == False:
