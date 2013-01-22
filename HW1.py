@@ -1,7 +1,7 @@
 def shout(txt):
   new_txt = txt.upper()
   new_txt = new_txt.replace(". ", "! ")
-  if new_txt[len(new_txt) - 1] != ".":
+  if new_txt[len(new_txt) - 1] != "!":
     new_txt = new_txt + "!"
   new_txt = new_txt.replace("?", "!")
   return new_txt
@@ -87,10 +87,10 @@ def piglatin(txt):
   vowels = 'aeiou'
   
   if firstLetter in vowels:
-    return txt + 'ay'
+    return txt + '-ay'
   elif firstLetter not in vowels and firstLetter not in weirdos:
 	tmp = txt[0]
-	return txt[1:] + tmp + 'ay'
+	return txt[1:] + '-' + tmp + 'ay'
   else: 
 	tmp2 = txt[:2]
-	return txt[2:] + tmp2 + 'ay'   
+	return txt[2:] + '-' + tmp2 + 'ay'   
